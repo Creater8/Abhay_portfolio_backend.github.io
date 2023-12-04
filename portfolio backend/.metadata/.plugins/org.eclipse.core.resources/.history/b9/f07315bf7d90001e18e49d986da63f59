@@ -1,0 +1,22 @@
+
+
+<%@page import="com.files.SaveRecord"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <%--  <jsp:bean id="recived" class="com.files.entites.recivedPersistenet"/> --%>
+     <jsp:useBean id="recived" class="com.files.entites.recivedPersistenet"/>
+     <jsp:setProperty property="*" name="recived"/>
+     
+ <%
+      int status=SaveRecord.
+      %>
+
+</body>
+</html>

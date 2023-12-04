@@ -1,0 +1,63 @@
+package com.files;
+
+import java.io.Serializable;
+import java.sql.SQLException;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.SharedSessionContract;
+import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import com.files.entites.recivedPersistenet;
+import com.mysql.cj.xdevapi.Session;
+
+public class SaveRecord
+{
+	StandardServiceRegistry ssr;
+	
+	
+	public SaveRecord() {
+		 ssr=new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+	   	   
+	}
+	 
+     
+     
+//    public  int saveRecords(recivedPersistenet recived)
+	public int saveRecords(String name)
+     
+     {
+    	Metadata  meta=new MetadataSources(ssr).getMetadataBuilder().build();
+	    SessionFactory  sf=meta.getSessionFactoryBuilder().build();
+	    Session session=(Session) sf.openSession();
+    	 Transaction  t=((SharedSessionContract) session).beginTransaction();
+    	     
+    	 int status=0;
+    	     try {
+    	      status=1;
+//    	      recivedPersistenet rp=new recivedPersistenet();
+//    		  rp.setName(recived.getName());
+//    		  rp.setEmail(recived.getEmail());
+//    		  rp.setMessage(recived.getMessage());
+    	     Serializable save=((org.hibernate.Session) session).save(name);
+    	     t.commit();
+    	     sf.close();
+    	     session.close();
+    	       }
+    	          catch (Exception e) {
+				// TODO: handle exception
+			    }
+  		  
+  		   return status;
+  		   
+     }
+    
+     
+     
+     
+}
+
+

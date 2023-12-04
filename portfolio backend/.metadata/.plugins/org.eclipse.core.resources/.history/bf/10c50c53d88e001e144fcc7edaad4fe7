@@ -1,0 +1,9 @@
+package com.files.entites;
+
+import org.hibernate.annotations.Entity;
+
+@Entity
+public class recivedPersistenet 
+{
+
+}

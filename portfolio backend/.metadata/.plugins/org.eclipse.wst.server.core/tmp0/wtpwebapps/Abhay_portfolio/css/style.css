@@ -1,0 +1,231 @@
+
+html {
+  scroll-behavior: smooth
+}
+.scroll{
+  transition: all 0.1s ease-in-out;
+  z-index: -1;
+}
+span{
+    color:  #36f5ff;
+}
+body{
+    background-color: #191d2b;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.4s ease-in-out;
+}
+a { 
+    
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+  .headitem{
+    text-align: center;
+  }
+  .headitem:hover
+  {
+    background-color: #191d2b;
+    border-radius: 24px;
+    transition: all 0.3s ease-out;
+    transform: translateY(-8px);
+  }
+  .change{
+    text-align: center;
+    background-color: #191d2b;
+    border-radius: 24px;
+  }
+.main-content{
+    /* border: 2px solid red; */
+}
+.container-fluid{
+    /* border:5px solid green; */
+}
+.header{
+   /* border: 4px solid yellow; */
+}
+.head{
+    background-color:  #36f5ff;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+}
+.hero{
+    border:none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.h-shape{
+    width: 65%;
+    height: 100%;
+    background-color: #36f5ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 60% 0, 90% 100%, 0% 100%);
+}
+.heroimg{
+    border: none;
+    height: 90%;
+    width: 68%;
+    margin-right: 0rem;
+}
+.images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a { 
+  
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+  .name{
+    font-weight: 700;
+    font-size: 3.7rem;
+  }
+  .text{
+    margin: 1.5rem 0;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color:  #dbe1e8;
+  }
+  .download{
+    border: 2px solid #36f5ff ;
+    border-radius: 24px;
+    text-align: center;
+  }
+  .download:hover{
+    background-color: #36f5ff;
+  }
+  .main-title{
+    text-align: center;
+  }
+  .main-title>h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  .stats{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #2a2e35;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -80%);
+    font-weight: 800;
+    font-size: 6.3rem;
+  }
+  .info{
+    
+    
+    text-transform: uppercase;
+  }
+  .infome{
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .para{
+    line-height: 2rem;
+    padding: 1rem;
+    color: #dbe1e8;
+  }
+  .leftabouttext{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #36f5ff;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+  }
+  .okk{
+    border: 1px solid #2a2e35;
+  }
+  .okk:hover{
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-10px);
+    border: 1px solid  #36f5ff ;
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+  }
+  .last{
+    border: 2px solid   #2a2e35;
+  }
+  .skills{
+    font-weight: 700;
+  }
+  .skilldata{
+    font-weight: 700;
+  
+  }
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.timeline-content {
+    max-width: 70%;
+}
+
+.timeline-date {
+    background-color: #36f5ff;
+    color: #191d2b;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+ .contacthead{
+  font-weight: 700;
+ 
+ }
+  .formtext{
+    background-color: #2a2e35;
+    border: 1px solid #2a2e35;;
+    border-radius: 24px;
+  }
+  .feedback{
+    border: 1px solid #2a2e35;;
+    background-color: #2a2e35;
+    border-radius: 10px;
+    
+    
+  }
+  .submit{
+    border: 2px solid #36f5ff ;
+    background-color: #191d2b;
+    color: white;
+    border-radius: 24px;
+    text-align: center;
+    width: 8vw;
+  }
+  .submit:hover{
+    background-color: #36f5ff;
+  
+  }
+  .workhead{
+    text-align: center;
+    line-height: 2rem;
+    padding: 1rem;
+    color: #dbe1e8;
+    font-weight: 700;
+  }
+  .work1{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border: 8px solid #36f5ff;
+    
+  }
+  .worktext{
+    font-weight: 700;
+    color: #36f5ff;
+  }
+  

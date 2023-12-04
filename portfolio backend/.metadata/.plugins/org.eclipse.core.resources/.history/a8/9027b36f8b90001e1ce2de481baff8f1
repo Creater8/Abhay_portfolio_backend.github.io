@@ -1,0 +1,58 @@
+package com.files;
+
+import java.sql.SQLException;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.SharedSessionContract;
+import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import com.files.entites.recivedPersistenet;
+import com.mysql.cj.xdevapi.Session;
+
+public class SaveRecord
+{
+	StandardServiceRegistry ssr
+	 SessionFactory sf
+	 Session session
+	 Transaction t
+	
+	public SaveRecord() {
+		StandardServiceRegistry ssr=new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+	     
+	     Metadata meta =new MetadataSources(ssr).getMetadataBuilder().build();
+	     
+	     SessionFactory sf=meta.getSessionFactoryBuilder().build();
+	     
+	     Session session=(Session) sf.openSession();
+	     Transaction t=((SharedSessionContract) session).beginTransaction();
+	}
+	 
+     
+     
+    public int saveRecords(recivedPersistenet recived)
+     
+     {
+    	 int status=0;
+    	 
+    		  recivedPersistenet rp=new recivedPersistenet();
+    		  rp.setName(recived.getName());
+    		  rp.setEmail(recived.getEmail());
+    		  rp.setMessage(recived.getMessage());
+    		  status=1;
+  			
+  		
+  		  
+  		   return status;
+  		   
+     }
+    
+     
+     
+     
+}
+
+

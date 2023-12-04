@@ -1,0 +1,32 @@
+
+
+<%@page import="java.io.PrintWriter"%>
+<%@page import="com.files.SaveRecord"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <%--  <jsp:bean id="recived" class="com.files.entites.recivedPersistenet"/> --%>
+     <jsp:useBean id="recived" class="com.files.entites.recivedPersistenet"/>
+     <jsp:setProperty property="*" name="recived"/>
+     
+ <%
+     SaveRecord sr=new SaveRecord();
+     int status=sr.saveRecords(recived); 
+     response.setContentType("text/html");
+     PrintWriter pw=response.getWriter();
+     
+     if(status!=0){
+    	 pw.print("Feedback saved Successfully!!");
+    	 request.getRequestDispatcher("index.jsp")
+    	 
+     }
+      %>
+
+</body>
+</html>
